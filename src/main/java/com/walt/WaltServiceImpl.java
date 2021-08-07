@@ -73,7 +73,7 @@ public class WaltServiceImpl implements WaltService {
      * @return a random number between MIN_DISTANCE and MAX_DISTANCE (modulo)
      */
     private int getRandomDistance() {
-        Random r = new Random();
+        Random r = new Random(System.currentTimeMillis());
         return r.nextInt(MAX_DISTANCE - MIN_DISTANCE + 1) + MIN_DISTANCE;
     }
     //---------------------------------------------------------------------------
